@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonas.</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Rubik">
+    <script src="https://kit.fontawesome.com/9e5ce062d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" alt="Jonas." class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Videographer/Video Editor</p>
+            <h1>Hi, I'm <span>Jonas</span>.</h1>
+        </div>
+    </div>
+</div>
+<!-------about--------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/me.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm an 18 year old college student currently majoring in Computer Science.
+                    Video has been my favorite hobby since high school when I really started
+                    getting into it with the video production course. Since then, I have made
+                    many projects for myself, school, and other clients.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link sk" onclick="opentab('skills')">Expertise</p>
+                    <p class="tab-links ex" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links ed" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab sk" id="skills">
+                    <ul>
+                        <li><span>Videography</span><br>Experienced behind the camera</li>
+                        <li><span>Video Editing</span><br>Edit videos for clients</li>
+                        <li><span>Animated Graphic Design</span><br>Make animated graphics</li>
+                    </ul>
+                </div>
+                <div class="tab-contents ex" id="experience">
+                    <ul>
+                        <li><span>School District Gigs</span><br>Camera operator for many school broadcasts</li>
+                        <li><span>Executive Producer</span><br>Executive producer of former high 
+                                                                school's video production program</li>
+                        <li><span>Personal Video Editing</span><br>Edit videos and stream on my YouTube channel</li>
+                    </ul>
+                </div>
+                <div class="tab-contents ed" id="education">
+                    <ul>
+                        <li><span>Video Production Courses</span><br>2021-2023</li>
+                        <li><span>Video Editing</span><br>2018-Present</li>
+                        <li><span>Graphic Designing</span><br>2022-Present</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--------------services--------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">What I Do</h1>
+        <div class="services-list">
+            <div>
+                <h2>Videography</h2>
+                <p>Shoot video for multiple occasions.</p>
+                <a href="pages/videography.html">Learn more</a>
+            </div>
+            <div>
+                <h2>Video Editing</h2>
+                <p>Edit together footage I've shot, or provide footage to be edited.</p>
+                <a href="pages/videoediting.html">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--------------portfolio--------------->
+<div id="portfolio">
+    <div class="container">
+        <div class="sub-title">What I've Made
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png" alt="Graphic Intro">
+                    <div class="layer1 layer">
+                        <h3>Show Intro Graphics</h3>
+                        <p>Animated intro sequence made in After Effects for KUGR's 
+                            Cougar Roundup weekly school news show.</p>
+                            <a href="https://youtu.be/i53wfLL2JHA?t=8"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png" alt="Graphic Intro">
+                    <div class="layer2 layer">
+                        <h3>Sports Showcase Video</h3>
+                        <p>Showcase of Northwest Athletics featuring videography and 
+                            editing done by me.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-1.png" alt="Graphic Intro">
+                    <div class="layer3 layer">
+                        <h3>Wedding Film</h3>
+                        <p>Shot and edited a cinematic film of a local wedding.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+
+<!--------------contact---------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p class="para">I'd love to hear from you. Contact me with questions, possible opportunities, or anything inbetween.</p>
+                <p><i class="fa-solid fa-inbox"></i> jonasbronson02@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/c/Clipsey"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/jonas.bronson02/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/jonas.bronson.5/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <!--<a href="" download class="btn btn2">Download CV</a>-->
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Jonas. Coded with love in HTML and CSS (and a lot of Googling)</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0px";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
