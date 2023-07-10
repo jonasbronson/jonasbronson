@@ -56,3 +56,17 @@ body{
     color: #3879cf;
     transition: 0.3s;
 }
+
+/* for small screen */
+
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 850px){
+
+    .announcement{
+        margin-top: 200px;
+    }
+
+}
