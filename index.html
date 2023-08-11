@@ -87,12 +87,12 @@
             <div>
                 <h2>Videography</h2>
                 <p>Shoot video for multiple occasions.</p>
-                <a href="pages/videography.html">Learn more</a>
+                <!--<a href="#">Learn more</a>-->
             </div>
             <div>
                 <h2>Video Editing</h2>
-                <p>Edit together footage I've shot, or provide footage to be edited.</p>
-                <a href="pages/videoediting.html">Learn more</a>
+                <p>Edit together footage I've shot, or edit footage provided to me.</p>
+                <!--<a href="#">Learn more</a>-->
             </div>
         </div>
     </div>
@@ -119,20 +119,12 @@
                         <h3>Sports Showcase Video</h3>
                         <p>Showcase of Northwest Athletics featuring videography and 
                             editing done by me.</p>
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-1.png" alt="Graphic Intro">
-                    <div class="layer3 layer">
-                        <h3>Wedding Film</h3>
-                        <p>Shot and edited a cinematic film of a local wedding.</p>
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://youtu.be/C_GCeATJakc"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See More</a>
+        <a href="/projects/projects.html" class="btn">See More</a>
     </div>
 </div>
 
@@ -145,26 +137,25 @@
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
                 <p class="para">I'd love to hear from you. Contact me with questions, possible opportunities, or anything inbetween.</p>
-                <p><i class="fa-solid fa-inbox"></i> jonasbronson02@gmail.com</p>
+                <!--<p><i class="fa-solid fa-inbox"></i> [email]</p>-->
                 <div class="social-icons">
-                    <a href="https://www.youtube.com/c/Clipsey"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/jonas.bronson02/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/jonas.bronson.5/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@jonasbronson"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/jonasbronsonvideo/"><i class="fa-brands fa-instagram"></i></a>
                 </div>
-                <!--<a href="" download class="btn btn2">Download CV</a>-->
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
     <div class="copyright">
-        <p>Copyright © Jonas. Coded with love in HTML and CSS (and a lot of Googling)</p>
+        <p>Copyright © Jonas.</p>
     </div>
 </div>
 
@@ -198,6 +189,24 @@
     }
 
 </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwx93xa7gkKrC2mHCVeM6PpKE_gRnIYmhX9m3ap1gaxy9kLj2Ul-pyRTvYm3DfXC3ch/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 </body>
 </html>
